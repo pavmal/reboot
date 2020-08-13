@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo of model working</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container mt-2">
+    <div class="row">
+        <div class="col">
+            <div class="card-2">
+                <h6 class="display-3 text-center text-success">программа Reboot КУ Сбербанка</h6>
+                <p class="lead text-center font-weight-bold">★ Финальный проект по теме анализа тональности отзывов об
+                    услуге выдачи ипотеки ★</p>
+                <p class="lead text-center font-weight-bold text-danger">Внимание: модель обучена на словаре русских
+                    слов</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2">
+    <form action="/" method="POST">
+        <div class="row">
+            <div class="col">
+                <p class="text-center">
+                    {{ form.ipoteka_tone(cols=80, rows=4, placeholder='Ваш отзыв об услуге выдачи ипотеки на русском языке... Или скопируйте сюда текст с отзывом с какого-нибудь сайта') }}<br>
+                </p><br>
+                {% if result_ipoteka != None %} {% include 'result_ipoteka.html' %} {% endif %}
+            </div>
+        </div>
+        <p class="text-center"><input type="submit" class="btn btn-primary btn-block mt-4"
+                                      value="Отправить на обработку"></p>
+    </form>
+</div>
+
+
+<footer class="container my-4">
+    &copy; Copyright 2020 by <a href="/about/">Malinkin Pavel</a>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
